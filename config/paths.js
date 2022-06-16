@@ -6,8 +6,8 @@ const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath');
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebook/create-react-app/issues/637
+// returns the current working directory of the Node.js process.
 const appDirectory = fs.realpathSync(process.cwd());
-console.log(appDirectory)
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
